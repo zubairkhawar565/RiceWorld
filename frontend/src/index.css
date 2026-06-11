@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-secondary text-primary font-sans antialiased;
+    color: #1a1a1a; /* Explicit default text color */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-primary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white font-medium rounded-sm transition-all duration-300 hover:bg-opacity-90 active:scale-95;
+  }
+  .btn-outline {
+    @apply px-6 py-3 border border-primary text-primary font-medium rounded-sm transition-all duration-300 hover:bg-primary hover:text-white active:scale-95;
+  }
+  .card-premium {
+    @apply bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-sm overflow-hidden;
+  }
+}
